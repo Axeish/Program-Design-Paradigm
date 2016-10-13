@@ -1,0 +1,55 @@
+CCS ID: ashish9
+Husky ID: kumar.as
+Grader: Chi Song
+
+
+========================================================================
+
+[Correctness]            0/10
+
+Deductions:
+Correctness (0/10)
+(-5) Automatic test did not run due to wrong file name "worm.rkt" (should be "worms.rkt"). TA had to manually run the test for you. Please be very carefull about the file names and provides functions, any small mismatchings with the problem statements will lead to fails of automatic tests, and you will get 5 points off immediately. 
+
+
+
+==========================================================================
+
+[Design Grading]			13/20
+  - Data Design:            3/5
+  - Function Specification: 4/5
+  - Implementation:         3/5
+  - Style:                  3/5
+
+Deductions:
+Data Design (3/5)
+- Incorrect template of LoPosns. '() is not the abstracted behavior of case empty?. Please refer to http://www.ccs.neu.edu/course/cs5010sp15/recipe.html#%28part._recursive-template%29 to get the correct template for list.
+- Incompleted template in KeyEvent: missing cases for "right" "left", etc.
+
+Function Specification (4/5)
+- Many insufficient purpose statements.
+
+Implementation (3/5)
+- Some improper argument names: e.g. line-291, line-304
+- Unnecessary code: line-292 no need to define two new get functions, you were just renaming the selectors.
+
+Style (3/5)
+- Some improper spacings, e.g. line-179, line-182, line-183, line-305~307
+- Some improper letter cases, e.g line-131, line-145 "worm" "WORM" should be "Worm".
+- Some improper parens, e.g. line-184, line-218
+- Some magic constants, e.g line-305~308
+
+
+==========================================================================
+
+[Data Design Alternatives]  4/5
+
+Deductions:
+The first one is good. The second one is kinda trivial .
+
+===========================================================================
+
+
+OFFLINE TOTAL:         17/35
+
+

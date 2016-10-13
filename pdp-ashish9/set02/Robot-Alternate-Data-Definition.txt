@@ -1,0 +1,27 @@
+Alternate Data Definition : Robot
+--------------------------------------------------------------------
+1.
+Robot is a (make-robot posn direction)
+ posn is a (make-posn x y) 
+ Robot is a placed at location (x,y) facing direction 
+(define-struct posn direction)
+
+;TEMPLATE:
+  (define (robot-fn r)  
+   (... (posn-x (robot-posn r))  
+      ...((posn-y (robot-posn r))
+       ...(robot-direction)
+        ...))
+;Example:
+(define pos (make-posn 12 34) 
+(define robot-pos (make-robot pos LEFT)
+
+;PROS:
+-more organized data structure 
+-easy readability	
+
+;CONS:
+-will occupy more memory 
+-difficult to maintain and implement nested structures 
+
+---------------------------------------------------------------------------

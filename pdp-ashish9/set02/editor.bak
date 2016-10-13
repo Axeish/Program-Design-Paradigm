@@ -1,0 +1,15 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname editor) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+(require 2htdp/universe)
+(require 2htdp/image)
+(require rackunit)
+(require "extras.rkt")
+(define TIME-ON-TASK 2) 
+
+(provide render)
+(provide edit)
+(provide string->editor)
+(provide editor-pre)
+(provide editor-post)
+(provide editor-pos)

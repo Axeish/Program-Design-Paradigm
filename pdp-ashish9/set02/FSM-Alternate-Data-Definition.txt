@@ -1,0 +1,58 @@
+Alternate Data Definition : fsm.rkt
+---------------------------------------------------------------------------
+1.
+
+;worldState is a (make-worldState flagColor State)
+
+;WHERE: 
+;flagColor is a color of flag of the state is one of the:
+; - white
+; - yellow
+; - green
+; - red
+;State one of the:
+; - AA 
+; - BC 
+; - DD 
+; - ER 
+(define AA "start, expect to see an 'a' next")
+(define BC "expect to see: 'b', 'c', or 'd'")
+(define DD "encountered a 'd', finished")
+(define ER "error, user pressed illegal key")
+
+ 
+;INTERP: Worldstate will check correctness of sequence of keys according to the regular expression
+; a(b|c)*d
+;the color of the state will change accordingly
+;TEMPLATE:
+  (define (worldState-fn w)  
+   (... (worldState-flagColor w)  
+      ...(worldState-state w)
+       ...))
+        ...))
+;Example:
+(define W_AA (make-worldState AA "white")) 
+
+
+;PROS:
+-more organized data structure 	
+-no need to explicitely asisign color to the states
+
+;CONS:
+-will occupy more memory 
+-difficult to implement nested structures 
+
+
+-------------------------------------------------------------------------------------------------------
+2. World-state is one of the 
+; "white"
+; "green"
+; "yellow"
+; "red"
+
+;PROS:
+;no need to explicitly assign color to individual states , can directly pass states to render function .
+
+CONS: 
+;user need to remember what is the significance of each color
+;readability is hampered

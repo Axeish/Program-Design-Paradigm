@@ -1,0 +1,54 @@
+CCS ID:
+Husky ID:kumar.as
+
+Grade Report
+
+Offline Grading:
+
+Correctness:           5__/10
+Data Design:            2_/5
+Function Specification: 3_/5
+Implementation:         4_/5
+Style:                  5_/5
+
+Deductions:
+
+Offline Total:         19__/30
+
+Notes:
+
+
+Online Grading:
+
+Q&A:                      10__/10
+Data Design Alternatives:  3_/5
+Presentation:              5_/5
+
+Deductions:
+
+Online Total:            18 __/20
+
+Notes:
+
+data definition: think more on alt data definitions
+
+
+Overall Score: 37__/50
+
+Notes:
+Data Design:           2 _/5
+1. why is score in world, what if i have 2 balls
+2. VELOCITY definition is missing
+3. counter should not be posInt
+4. coordinates should be center of ball
+5. parameters in data definition constructor template are not correct,should be like
+  posint or nonnegint
+Function Specification:  3_/5
+1. ball-off-canvas?  check the signatures
+Implementation:         4_/5
+1. template for mouse-handler :  use ifelse if you have 2 conditions
+(correction):: you should use cond for itemized data and as key event is itemized so it is correct to
+          use a cond here. Not deducting any marks for this.
+2. world-after-click: strategy is wrong
+Style:                  5_/5
+1. warning: take care of this :ball-forward: spacing issue

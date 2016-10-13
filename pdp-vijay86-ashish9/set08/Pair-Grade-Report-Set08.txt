@@ -1,0 +1,89 @@
+Partner1 Name: Vijay Claud Kliyara Philip
+Partner1 CCS ID: vijay86
+
+Partner2 Name: Ashish Kumar
+Partner2 CCS ID: ashish9
+
+
+Grade Report
+
+Design Grading:
+
+Correctness:           10/10
+Data Design:            5/6
+Function Specification: 3/6
+Implementation:         5/6
+Style:                  6/6
+
+Deductions:
+
+Design Total:         29/34
+
+Notes:
+
+Data Design
+* don't decompose MsgForClient in ListOf<MsgForClient> template, just pass it
+  along to msgForClient-fn
+
+Function Specification
+* purpose statement for print-msgs could be a little more clear (e.g. point out
+  that it won't return an image wider than the given one)
+* strategy missign for print-msgs/a
+* words-for-width/a has signature, purpose statement, etc. from different fn
+  and the outer function, words-for-width, has a return type that doesn't match
+  the return type of the accumulator
+* find-name signature is wrong (says it returns Boolean)
+
+Implementation
+* print-msgs/a feels like it's doing too much (it's even doing double decomp)
+  but overall it's not too hard to follow. If you didn't this time, I'd try to
+  simplify functions like this in the future.
+* receive function shouldn't be decomposing World as well as MsgFromServer.
+  Would you have decomposed World as well as say, KeyEvent, if this were an
+  Editor program?
+
+Codewalk Grading:
+
+Partner1: Vijay
+
+Q&A:                       9/10
+Presentation:              5/6
+
+Deductions:
+Notes:
+
+* Read up on implementing functions and about double decomposition
+* Please speak a little louder, hard to understand at times
+
+Partner 1 Codewalk Total  14/16
+
+
+Partner2: Ashish
+
+Q&A:                        9/10
+Presentation:               5/6
+
+Deductions:
+Notes:
+
+* Read up on implementing functions and about double decomposition
+* Please speak a little louder, hard to understand at times
+
+Partner 2 Codewalk Total: 14/16
+
+
+
+Overall Score for Partner 1: 43/50
+Overall Score for Partner 2: 43/50
+
+Other Notes:
+
+* 10/10 on correctness, good codewalk as well. Keep up the good work
+
+* Your choice to decompose KeyEvent in key-handler, rather than decomposing
+  World, required you to make a lot of pesky functions that all do basically
+  the same thing: "update" the editor in this world with the some new editor. If
+  you had decomposed World in key-handler and then decomposed the KeyEvent in a
+  separate function (e.g. editor-after-key) you could've saved yourself some
+  trouble. Sometimes it's helpful to not decompose the "obvious" data when you
+  think you should, try to keep that in mind.

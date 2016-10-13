@@ -1,0 +1,23 @@
+Alternate Data Definition : Editor
+-------------------------------------------------------------------------
+1.
+ Editor is (make-editor String Natural)  
+ INTERP: the current text (txt) and cursor position (cp) 
+   
+
+;TEMPLATE:
+  (define (editor-fn e)  
+   (...  (editor-txt e) ... (editor-cp) ... )
+
+;example :
+(define ED (make-editor "asdfhgj" 3 ) ) - > asdf|hgj
+
+
+;PROS:
+-String Handling function that will become easy. we can use just string-insert and string-delete functions 
+-easy readabilty as there will be no confusion between pre and post .
+
+;CONS:
+-rendering functions will need extra handlers to split the string, complex
+---------------------------------------------------------------------------------------------------------
+
